@@ -12,9 +12,36 @@ View your app in AI Studio: https://ai.studio/apps/drive/1Xx_9FFDD94SIDynnm5TAL7
 
 **Prerequisites:**  Node.js
 
-
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+   ```bash
+   npm install
+   ```
+2. Copy `.env.example` to `.env.local` and set the `GEMINI_API_KEY` to your Gemini API key
 3. Run the app:
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
+
+> **Note:** If you see TypeScript errors in your IDE after cloning, run `npm install` to install the required dependencies and type definitions.
+
+## Deploy on Vercel
+
+**Prerequisites:** Vercel Account
+
+1. Install Vercel CLI (optional):
+   `npm i -g vercel`
+2. Build the project:
+   `npm run build`
+3. Deploy to Vercel:
+   - Using Vercel CLI: `vercel`
+   - Or connect your GitHub repository to Vercel dashboard for automatic deployments
+
+### Environment Variables on Vercel
+
+Add the following environment variables in your Vercel project settings:
+- `GEMINI_API_KEY`: Your Gemini API key
+
+The project is configured with `vercel.json` for optimal deployment settings including:
+- Static asset caching
+- SPA routing support
+- Proper build configuration
